@@ -1,0 +1,55 @@
+{% extends "layout2.html" %}
+
+	{% block heading %}
+    Find Books
+  {% endblock %}
+
+	{% block body %}
+  <h3>Choose One Option below: </h3>
+    <div class="onyesha" id="withName">
+          <div class="card text-center">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" href="#searchWithName">Book Name</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#searchWithID" onclick="showisbn()">Use ISBN</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body " id="searchWithName">
+            <form class="form-inline my-2 my-lg-0 ml-auto">
+              <input class="form-control" type="search" placeholder="Type Name" aria-label="Book Details">
+              <button class="btn btn-outline-blue btn-md my-2 my-sm-0 ml-3" type="submit">GO</button>
+            </form>
+          </div>
+        </div>
+    </div>
+
+
+
+    <div class="ficha" id="withIsbn">
+
+      <div class="card text-center">
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <a class="nav-link " href="#searchWithName" onclick="showname()">Book Name</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link active" href="#searchWithID">Use ISBN</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card-body" id="searchWithID">
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+          <input class="form-control" type="search" placeholder="Type ISBN" aria-label="Book Details">
+          <button class="btn btn-outline-blue btn-md my-2 my-sm-0 ml-3" type="submit">GO</button>
+        </form>
+      </div>
+      </div>
+    </div>
+
+	{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "layout2.html" %}
+
+	{% block heading %}
+    About Mbuku
+  {% endblock %}
+
+	{% block body %}
+  <!-- Card -->
+<div class="card card-cascade wider reverse">
+
+  <!-- Card image -->
+  <div class="view view-cascade overlay purple-gradient">
+    <img class="card-img-top" src="{{ url_for('static', filename='assets/tree.png') }}"
+      alt="Card image cap">
+      <a href="{{ url_for('contact') }}">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body card-body-cascade text-center">
+
+    <!-- Title -->
+    <h4 class="card-title"><strong>📚 Mbuku</strong></h4>
+    <!-- Subtitle -->
+    <h6 class="font-weight-bold indigo-text py-2">What is Mbuku?</h6>
+    <!-- Text -->
+    <p class="card-text"><strong>Mbuku</strong> is a slang version of swahili in Kenya that
+      means <strong>Book</strong>. <br>
+      We get our passion for this website on the hope that even those in the deepest of ghetto's
+      who have a passion for books can still get a platform to choose their next title.
+      Education for the masses, Power to the people.
+
+      As you may have heard, our developers at Hodari<sup>&copy;</sup><b>TM</b> Have a very strict policy of
+      customer comes first.
+      So feel free to <a class="btn btn-primary white-text" href="{{ url_for('contact') }}">Talk TO Us</a>
+    </p>
+  </div>
+</div>
+<!-- Card -->
+	{% endblock %}

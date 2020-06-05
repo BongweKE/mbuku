@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+	{% block heading %}
+  		Book No <small>#</small>{{ isbn }}
+  {% endblock %}
+
+	{% block body %}
+
+	<div class="jumbotron">
+		<small>*Use the blue Button to write reviews without redirection</small>
+    <h2 class="h1-responsive">Reviews By Others:  </h2>
+		<div class="resp-container">
+			<iframe src="{{ url_for('my_book', isbn=isbn ) }}" ></iframe>
+		</div>
+		<a href="{{ url_for('rate', isbn=isbn ) }}" class="btn btn-info">Write Review</a> |
+		<a href="{{ url_for('rate', isbn=isbn ) }}" class="btn btn-info">Rate</a>
+
+	</div>
+
+
+	{% endblock %}

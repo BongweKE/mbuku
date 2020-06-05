@@ -1,0 +1,29 @@
+{% extends "layout2.html" %}
+
+	{% block heading %}
+    Rate & review A book
+  {% endblock %}
+
+	{% block body %}
+
+
+		<form class="" action="" method="post">
+			<label for="rating">Star Rating</label>
+				<div class="rating" id="rating">
+					<input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+					<input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+					<input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+					<input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+					<input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+				</div>
+
+
+
+		    <textarea id="review" class="form-control rounded-0" placeholder="Brief Review"></textarea>
+
+		    <button class="btn btn-info btn-block" type="submit">Send Review & Ratings </button>
+		</form>
+
+
+
+	{% endblock %}

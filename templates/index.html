@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+	{% block heading %}
+    Access to over 3000 books
+  {% endblock %}
+
+	{% block body %}
+
+
+
+    <div class="homepage-options">
+      <button type="button" class="btn btn-light" name="login"><a href="{{ url_for('fetchLogin') }}">login</a></button> |
+      <button type="button" class="btn btn-light" name="signup"><a href="{{ url_for('fetchSignup') }}">signup</a></button>
+    </div>
+
+
+	{% endblock %}

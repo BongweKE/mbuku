@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/bootstrap-grid.min.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/bootstrap-reboot.min.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}">
+      <!-- Material Design Bootstrap -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/mdb.min.css') }}">
+      <!-- always put your styles last to give them priority over the frameworks -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+
+
+    <title></title>
+  </head>
+  <body>
+    <!-- start of main Body  -->
+    <nav>
+      <div class="navbar">
+
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg  z-index-1">
+      <a class="navbar-brand" href="#">📚 Mbuku</a>
+      {% block nav %}
+
+      {% endblock %}
+    </nav>
+    <main>
+      <h1 class="heading">{% block heading %}{% endblock %}</h1>
+      <div class="container">
+        {% block body %}
+        {% endblock %}
+      </div>
+
+    </main>
+    <footer class="grid">
+        <div class="" id="bg1">
+
+        </div>
+        <div class="copyright">
+          &copy; 2020 HODARI<sup>TM</sup> dev Co.
+        </div>
+        <div >
+          <ul class="social">
+            <li><a href="#"><img src="{{ url_for('static', filename='assets/icon_fb.svg') }}" alt="facebook"></a></li>
+            <li><a href="#"><img src="{{ url_for('static', filename='assets/icon_tw.svg') }}" alt="twitter"></a></li>
+          </ul>
+        </div>
+          {% block footer %}
+          {% endblock %}
+    </footer>
+
+  </body>
+
+
+  <script src="{{ url_for('static', filename='bootstrap/js/jquery.js') }}" charset="utf-8"></script>
+  <script src="{{ url_for('static', filename='bootstrap/js/jquery.barrating.min.js') }}" charset="utf-8"></script>
+  <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.js') }}" charset="utf-8"></script>
+  <script src="{{ url_for('static', filename='bootstrap/js/popper.js') }}" charset="utf-8"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/mdb.min.js') }}" charset="utf-8"></script>
+
+  <!-- custom JavaScript -->
+  <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/custom.js') }}" ></script>
+
+  <!-- rating.js file -->
+
+  <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/rating.min.js') }}"></script>
+
+
+</html>

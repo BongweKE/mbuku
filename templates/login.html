@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+	{% block heading %}
+    Login Page
+  {% endblock %}
+
+	{% block body %}
+
+
+
+	<form  class="border border-light p-5 ">
+
+	<p class="h4 mb-4 text-center">Sign in Now!</p>
+
+	<input type="email" id="loginFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+	<input type="password" id="loginFormPassword" class="form-control mb-4" placeholder="Password">
+
+	<div class="d-flex justify-content-between">
+			<div>
+					<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+							<label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+					</div>
+			</div>
+	</div>
+
+	<button class="btn btn-info btn-block my-4" type="submit">LOGIN</button>
+
+	<div class="text-center">
+			<p>Not a member?
+					<a href="{{ url_for('fetchSignup') }}">Sign Up</a>
+			</p>
+	</div>
+</form>
+
+
+	{% endblock %}

@@ -1,0 +1,95 @@
+{% extends "layout2.html" %}
+
+	{% block heading %}
+    Mbuku Homepage
+  {% endblock %}
+
+	{% block body %}
+  <p>
+  Access 1000's of books from goodreads.com's online platform, along with their reviews &ratings.
+  Submit your review if you have already red the book.
+  </p>
+
+  <!-- Card for Find books -->
+<div class="card z-index-0">
+
+  <!-- Card image -->
+  <div class="view overlay purple-gradient">
+    <img class="card-img-top" src="{{ url_for('static', filename='assets/books.png') }}"
+      alt="Card image cap">
+    <a href="{{ url_for('search') }}">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h4 class="card-title">Find Book</h4>
+    <!-- Text -->
+    <p class="card-text">Search through our platform for various books, reviews, etc.</p>
+    <!-- Button -->
+    <a href="{{ url_for('search') }}" class="btn btn-primary">GO</a>
+
+  </div>
+
+</div>
+<!-- Card -->
+
+
+<!-- Card for About us page -->
+<div class="card  z-index-0">
+
+<!-- Card image -->
+<div class="view overlay purple-gradient">
+  <img class="card-img-top" src="{{ url_for('static', filename='assets/qnmark.png') }}"
+    alt="Card image cap">
+  <a href="{{ url_for('about') }}">
+    <div class="mask rgba-white-slight"></div>
+  </a>
+</div>
+
+<!-- Card content -->
+<div class="card-body">
+
+  <!-- Title -->
+  <h4 class="card-title">About Mbuku</h4>
+  <!-- Text -->
+  <p class="card-text">We are a collective of aweome developers wo have come together to....</p>
+  <!-- Button -->
+  <a href="{{ url_for('search') }}" class="btn btn-primary">Read More</a>
+
+</div>
+
+</div>
+<!-- Card -->
+
+<!-- Card for Contact us page -->
+<div class="card  z-index-0">
+
+<!-- Card image -->
+<div class="view overlay purple-gradient">
+  <img class="card-img-top" src="{{ url_for('static', filename='assets/contact.png') }}"
+    alt="Card image cap">
+  <a href="{{ url_for('contact') }}">
+    <div class="mask rgba-white-slight"></div>
+  </a>
+</div>
+
+<!-- Card content -->
+<div class="card-body">
+
+  <!-- Title -->
+  <h4 class="card-title">Talk To Us</h4>
+  <!-- Text -->
+  <p class="card-text">We value Your feedback, Our customer is our #1 priority</p>
+  <!-- Button -->
+  <a href="{{ url_for('search') }}" class="btn btn-primary">Contact Us</a>
+
+</div>
+
+</div>
+<!-- Card -->
+
+	{% endblock %}

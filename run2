@@ -1,0 +1,19 @@
+export FLASK_APP=application.py
+
+export FLASK_ENV=development
+
+export FLASK_DEBUG=1
+
+export DATABASE_URL=postgres://llxybhqjgdbtqy:14ba036452e792db3ac9beb1290e660a19db4cf7423698accba90cbcb1fa1987@ec2-54-246-89-234.eu-west-1.compute.amazonaws.com:5432/d4nn0juql565tp
+
+flask run
+
+
+
+cd static/css
+
+sass styles.scss:styles.css
+
+sass --watch styles.scss:styles.css
+
+
